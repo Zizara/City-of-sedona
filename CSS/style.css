@@ -1,3 +1,30 @@
+@font-face {
+    font-family: "wisdom_scriptregular";
+    font-weight: 400;
+    font-style: normal;
+
+    src: url(../font/wisdom_script_aj-webfont.eot);
+    src: url(../font/wisdom_script_aj-webfont.eot?#iefix) format("embedded-opentype"), url(../font/wisdom_script_aj-webfont.woff) format("woff"), url(../font/wisdom_script_aj-webfont.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "sullivanfill";
+    font-weight: 400;
+    font-style: normal;
+
+    src: url(../font/sullivan-fill-webfont.eot);
+    src: url(../font/sullivan-fill-webfont.eot?#iefix) format("embedded-opentype"), url(../font/sullivan-fill-webfont.woff) format("woff"), url(../font/sullivan-fill-webfont.ttf) format("truetype"), url(../font/sullivan-fill-webfont.svg#sullivanfill) format("svg");
+}
+
+@font-face {
+    font-family: "zeroneroblack";
+    font-weight: 400;
+    font-style: normal;
+
+    src: url(../font/zeronero-webfont.eot);
+    src: url(../font/zeronero-webfont.eot?#iefix) format("embedded-opentype"), url(../font/zeronero-webfont.woff) format("woff"), url(../font/zeronero-webfont.ttf) format("truetype"), url(../font/zeronero-webfont.svg#zeroneroblack) format("svg");
+}
+
 body {
   min-width: 768px;
   text-transform: uppercase;
@@ -74,4 +101,50 @@ nav a.menu-logo {
   background: #3f6586 url(../img/main-logo.png) no-repeat center;
   background-size: 100% auto;
   text-align: center;
+}
+
+.font-sullivanfill {
+  font-family: "sullivanfill", sans-serif, Arial;
+  color: #81b3d2;
+  font-size: 63px;
+  line-height: 70px;
+}
+
+.font-wisdom {
+    color: #766357;
+    font-family: "wisdom_scriptregular", sans-serif, Arial;
+    font-size: 29px;
+    line-height: 44px;
+    text-transform: none;
+    position: relative;
+    z-index: 2;
+    padding: 10px 15px;
+  }
+
+.font-wisdom::after {
+  content: "";
+  bottom: 45%;
+  left: 33%;
+  position: absolute;
+  width: 4%;
+  height: 3px;
+  background-color: #766357;
+}
+
+.font-wisdom::before {
+  content: "";
+  bottom: 45%;
+  right: 33%;
+  position: absolute;
+  width: 4%;
+  height: 3px;
+  background-color: #766357;
+}
+
+.font-zeroneroblack {
+  color: #ffffff;
+  font-family: "zeroneroblack", sans-serif, Arial;
+  font-size: 116px;
+  line-height: 142px;
+  margin: 10px;
 }
