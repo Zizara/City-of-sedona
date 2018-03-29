@@ -168,3 +168,30 @@ nav a.menu-logo {
   line-height: 29px;
   text-transform: none;
 }
+
+/* описание */
+.description {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.description h4 {
+  line-height: 26px;
+  font-size: 21px;
+}
+
+.description p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+figure {
+  margin: 0;
+  margin-left: auto;
+}
