@@ -177,9 +177,17 @@ nav a.menu-logo {
   margin-bottom: 50px;
 }
 
-.description h4 {
+.description>h4 {
   line-height: 26px;
   font-size: 21px;
+}
+
+.description>h3 {
+  line-height: 26px;
+  font-size: 21px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .description>p {
@@ -187,13 +195,13 @@ nav a.menu-logo {
   line-height: 24px;
 }
 
-/* третья секция */
+/* next section */
 .flex-third-section {
   display: flex;
   align-items: center;
   max-height: 256px;
   overflow: hidden;
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
 }
 
 .flex-third-section>div {
@@ -216,7 +224,7 @@ nav a.menu-logo {
    font-weight: 700;
    line-height: 21px;
    color: #ffffff;
-   width: 130px;
+   width: 200px;
    margin: 0 auto;
    margin-bottom: 25px;
  }
@@ -233,8 +241,8 @@ nav a.menu-logo {
   content: "";
   height: 2px;
   width: 6px;
-  bottom: 50%;
-  left: 42px;
+  bottom: 40%;
+  left: 75px;
   background-color: #ffffff;
 }
 
@@ -243,8 +251,8 @@ nav a.menu-logo {
   content: "";
   height: 2px;
   width: 6px;
-  bottom: 50%;
-  right: 42px;
+  bottom: 40%;
+  right: 75px;
   background-color: #ffffff;
 }
 
@@ -255,11 +263,12 @@ nav a.menu-logo {
   width: 65%;
 }
 
-/* 4-я секция  */
+/* next section */
 .flex-fourth-section {
   display: flex;
   text-align: center;
   justify-content: space-around;
+  padding-top: 45px;
   align-content: center;
   background-color: #ffffff;
 }
@@ -268,5 +277,38 @@ nav a.menu-logo {
   margin: 0;
   max-width: 280px;
   margin-left: 15px;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
+}
+
+/* next section */
+.diff {
+  background-color: #eeeeee;
+}
+
+.numbers {
+  position: relative;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.numbers::after {
+  position: absolute;
+  content: "";
+  bottom: 43%;
+  right: 115px;
+  width: 11px;
+  height: 2px;
+  background: #000;
+}
+
+.numbers::before {
+  position: absolute;
+  content: "";
+  bottom: 43%;
+  left: 115px;
+  width: 11px;
+  height: 2px;
+  background: #000;
 }
