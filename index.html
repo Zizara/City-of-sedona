@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Sedona</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https:/resources/demos/style.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
@@ -79,15 +83,23 @@
         <p>Большинство едет в гранд каньон и толпится там</p>
       </div>
     </div>
-    <div>
-      <p>Заинтересовались?</p>
-      <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <form class="" action="index.html" method="post">
-        <div>
-          <a href="">Поиск гостиницы в Седоне</a>
-        </div>
-      </form>
+    <div class="description">
+      <h4>Заинтересовались?</h4>
+      <p>Укажите предполагаемые даты поездки и мы<br>
+         покажем вам лучшие предложения гостиниц в седоне</p>
+    </div>
+    <div class="form">
+      <p class="form-p">ПОИСК ГОСТИНИЦЫ В седоне</p>
+        <form class="form-main" action="index.html" method="post">
+          <label for="datepicker">Дата заезда:</label>
+           <input id="datepicker" type="text" name="dateIn" value="">
+        </form>
     </div>
   </main>
+    <script>
+      $(function() {
+        $("#datepicker").datepicker();
+      } );
+  </script>
 </body>
 </html>

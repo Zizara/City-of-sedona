@@ -312,3 +312,44 @@ nav a.menu-logo {
   height: 2px;
   background: #000;
 }
+
+/*form*/
+.form {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+  -23px 0 20px -23px rgba(0, 0, 0, .8),
+  23px 0 20px -23px rgba(0, 0, 0, .8),
+  0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.form-p {
+  font-size: 21px;
+  line-height: 26px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #fff;
+  background-color: #766357;
+  text-align: center;
+  padding: 25px 0;
+}
+
+.form-main {
+  padding: 50px;
+}
+
+.form-main>label {
+  font-size: 14px;
+  line-height: 21px;
+  margin-right: 30px;
+}
+
+.form-main [type="text"] {
+  width: 50%;
+  padding-right: 20px;
+  background-color: rgba(221, 217, 217, 0.61);
+  border: 1px solid #000;
+}
