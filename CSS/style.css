@@ -326,7 +326,7 @@ nav a.menu-logo {
   0 0 40px rgba(0, 0, 0, .1) inset;
 }
 
-.form-p {
+.form>p {
   font-size: 21px;
   line-height: 26px;
   border-top-left-radius: 5px;
@@ -338,18 +338,36 @@ nav a.menu-logo {
 }
 
 .form-main {
+  display: flex;
+  flex-direction: column;
   padding: 50px;
 }
 
-.form-main>label {
-  font-size: 14px;
-  line-height: 21px;
-  margin-right: 30px;
+section {
+  margin-bottom: 20px;
 }
 
-.form-main [type="text"] {
-  width: 50%;
-  padding-right: 20px;
-  background-color: rgba(221, 217, 217, 0.61);
-  border: 1px solid #000;
+section>label {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  width: 340px;
 }
+
+section [type="text"] {
+  width: 50%;
+  height: 20px;
+  padding-right: 20px;
+  background-color: rgba(221, 217, 217, 0.6);
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+i.far {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  }

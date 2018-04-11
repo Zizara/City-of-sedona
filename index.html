@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Sedona</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https:/resources/demos/style.css">
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https:/resources/demos/style.css"> -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
+  <link rel="stylesheet" href="css/web-fonts-with-css/css/fontawesome-all.min.css">
 </head>
 <body>
   <header class="containter">
@@ -89,17 +90,29 @@
          покажем вам лучшие предложения гостиниц в седоне</p>
     </div>
     <div class="form">
-      <p class="form-p">ПОИСК ГОСТИНИЦЫ В седоне</p>
+      <p>ПОИСК ГОСТИНИЦЫ В седоне</p>
         <form class="form-main" action="index.html" method="post">
-          <label for="datepicker">Дата заезда:</label>
-           <input id="datepicker" type="text" name="dateIn" value="">
+          <section>
+            <label for="start">
+             <input id="start" type="text" name="dateIn" value=""
+             placeholder="дата заезда">
+             <i class="far fa-calendar-alt"></i>
+             </label>
+          </section>
+          <section>
+            <label for="finish">
+             <input id="finish" type="text" name="dateOut" value=""
+             placeholder="дата выезда">
+             <i class="far fa-calendar-alt"></i>
+             </label>
+          </section>
         </form>
     </div>
   </main>
-    <script>
+    <!-- <script>
       $(function() {
         $("#datepicker").datepicker();
       } );
-  </script>
+  </script> -->
 </body>
 </html>
