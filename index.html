@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Sedona</title>
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-  <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https:/resources/demos/style.css"> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https:/resources/demos/style.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
@@ -93,19 +93,20 @@
       <p>ПОИСК ГОСТИНИЦЫ В седоне</p>
         <form class="form-main" action="index.html" method="post">
           <section>
-            <label for="start">
-             <input id="start" type="text" name="dateIn" value=""
-             placeholder="дата заезда">
+            <label for="name" class="labelText">Введите имя</label>
+             <input class="inputText" id="name" type="text" name="nameuser" value="">
+             <i class="far fa-user"></i>
+           </section>
+          <section>
+            <label for="start" class="labelText">дата заезда</label>
+             <input class="inputText" id="start" type="text" name="dateIn" value="">
              <i class="far fa-calendar-alt"></i>
-             </label>
           </section>
           <section>
-            <label for="finish">
-             <input id="finish" type="text" name="dateOut" value=""
-             placeholder="дата выезда">
+            <label for="finish" class="labelText">дата выезда</label>
+             <input class="inputText" id="finish" type="text" name="dateOut" value="">
              <i class="far fa-calendar-alt"></i>
-             </label>
-          </section>
+           </section>
         </form>
     </div>
   </main>
@@ -114,5 +115,17 @@
         $("#datepicker").datepicker();
       } );
   </script> -->
+  <script>
+    $(".inputText").focus(function() {
+      $(this).siblings(".labelText").addClass("focus");
+    })
+
+    $(".inputText").blur(function() {
+      if($(this).val()===""){
+      $(this).siblings(".labelText").removeClass("focus");
+      }
+    })
+
+  </script>
 </body>
 </html>

@@ -344,30 +344,55 @@ nav a.menu-logo {
 }
 
 section {
-  margin-bottom: 20px;
-}
+  margin-bottom: 30px;
 
-section>label {
+}
+/*style input*/
+.inputText {
   position: relative;
-  font-size: 14px;
-  line-height: 21px;
-  width: 340px;
 }
 
-section [type="text"] {
-  width: 50%;
-  height: 20px;
-  padding-right: 20px;
-  background-color: rgba(221, 217, 217, 0.6);
-  border: 1px solid #000;
-  border-radius: 5px;
+.labelText {
+  position: absolute;
+  line-height: 40px;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.focus {
+  transform: translateY(-30px);
+  color: #2950f7;
+  font-size: 12px;
 }
 
 i.far {
-  position: absolute;
-  top: -4px;
-  right: 0;
+  position: relative;
+  top: 0;
+  right: 33px;
   width: 26px;
   height: 26px;
+  font-size: 20px;
   line-height: 26px;
-  }
+  opacity: 0.5;
+}
+
+section .inputText {
+  width: 50%;
+  padding: 10px 20px;
+  padding-right: 25px;
+  background-color: rgba(221, 217, 217, 0.6);
+  border: 1px solid rgba(203, 21, 65, 0.3);
+  border-radius: 1px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  outline: none;
+}
+
+section .inputText:hover {
+  outline: 1px solid rgba(203, 21, 65, 0.8);
+}
+
+section .inputText:focus {
+  outline: 2px solid rgba(203, 21, 65, 1);
+}
