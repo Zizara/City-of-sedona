@@ -344,9 +344,11 @@ nav a.menu-logo {
 }
 
 section {
+  margin: auto;
+  width: 100%;
   margin-bottom: 30px;
-
 }
+
 /*style input*/
 .inputText {
   position: relative;
@@ -377,7 +379,7 @@ i.far {
 }
 
 section .inputText {
-  width: 50%;
+  /* width: 60%; */
   padding: 10px 20px;
   padding-right: 25px;
   background-color: rgba(221, 217, 217, 0.6);
@@ -395,4 +397,40 @@ section .inputText:hover {
 
 section .inputText:focus {
   outline: 2px solid rgba(203, 21, 65, 1);
+}
+/*style counter*/
+.counter {
+  display: flex;
+}
+
+.counter .inputText {
+  width: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.minus,
+.plus {
+  background: #81b3d2;
+  color: #000000;
+  line-height: 24px;
+  padding: 1px 5px;
+  margin: 0 3px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.counter>section {
+  display: flex;
+  justify-content: center;
+}
+
+/* .counter>section:first-child {
+  margin-right: auto;
+} */
+
+section>p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-right: 5px;
 }
