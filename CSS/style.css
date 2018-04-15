@@ -401,10 +401,11 @@ section .inputText:focus {
 /*style counter*/
 .counter {
   display: flex;
+  margin: auto;
 }
 
 .counter .inputText {
-  width: 10px;
+  width: 15px;
   padding: 0 5px;
   border-radius: 3px;
 }
@@ -422,12 +423,16 @@ section .inputText:focus {
 
 .counter>section {
   display: flex;
-  justify-content: center;
+  }
+
+.counter>section:first-child {
+  margin-left: -12%;
+  margin-right: 15%;
 }
 
-/* .counter>section:first-child {
-  margin-right: auto;
-} */
+.counter>section:last-child {
+  width: 120px;
+}
 
 section>p {
   font-size: 14px;

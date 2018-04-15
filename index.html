@@ -111,24 +111,29 @@
              <section>
                <p>взрослые</p>
                <span class="minus">-</span>
-               <input class="inputText" type="text" name="amount" value="" readonly>
+               <input id="parents" class="inputText" type="text" name="amount" value="1" readonly>
                <span class="plus">+</span>
              </section>
              <section>
                <p>дети</p>
                <span class="minus">-</span>
-               <input class="inputText" type="text" name="amount" value="" readonly>
+               <input id="child" class="inputText" type="text" name="amount" value="1" readonly>
                <span class="plus">+</span>
              </section>
            </div>
         </form>
     </div>
   </main>
-    <!-- <script>
-      $(function() {
-        $("#datepicker").datepicker();
-      } );
-  </script> -->
+  <script>
+    $(function() {
+      $("#start").datepicker();
+    } );
+  </script>
+  <script>
+    $(function() {
+      $("#finish").datepicker();
+    } );
+  </script>
   <script>
     $(".inputText").focus(function() {
       $(this).siblings(".labelText").addClass("focus");
@@ -139,7 +144,22 @@
       $(this).siblings(".labelText").removeClass("focus");
       }
     })
-
   </script>
+  <script>
+    var counter = document.querySelector('counter');
+    var countInput = document.getElementById('parents');
+    var butM = document.querySelector('minus');
+    var butP = document.querySelector('plus');
+    var units = countInput.value.replace(/\d/g, '');
+    butP.onclick = function(){
+      countInput.value = parseInt(countInput.value)+1+units;
+    };
+    butM.onclick = function(){
+      if(parseInt(countInput.value) > 1) {
+          countInput.value = parseInt(countInput.value)-1+units;
+      }
+    };
+  </script>
+
 </body>
 </html>
