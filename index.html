@@ -110,18 +110,21 @@
            <div class="counter">
              <section>
                <p>взрослые</p>
-               <span class="minus">-</span>
+               <span id="minusParents" class="minus">-</span>
                <input id="parents" class="inputText" type="text" name="amount" value="1" readonly>
-               <span class="plus">+</span>
+               <span  id="plusParents" class="plus">+</span>
              </section>
              <section>
                <p>дети</p>
-               <span class="minus">-</span>
+               <span id="minusChild" class="minus">-</span>
                <input id="child" class="inputText" type="text" name="amount" value="1" readonly>
-               <span class="plus">+</span>
+               <span id="plusChild" class="plus">+</span>
              </section>
            </div>
         </form>
+        <div class="footerForm">
+           <button class="btn" type="button" name="button">Найти отель</button>
+        </div>
     </div>
   </main>
   <script>
@@ -146,17 +149,35 @@
     })
   </script>
   <script>
-    var counter = document.querySelector('counter');
-    var countInput = document.getElementById('parents');
-    var butM = document.querySelector('minus');
-    var butP = document.querySelector('plus');
-    var units = countInput.value.replace(/\d/g, '');
-    butP.onclick = function(){
-      countInput.value = parseInt(countInput.value)+1+units;
+    var counterParent = document.querySelector('counter');
+    var countInputParent = document.getElementById('parents');
+    var butMParent = document.getElementById('minusParents');
+    var butPParent = document.getElementById('plusParents');
+    //в содержании инпута удалить (replace) все(g) цифры (/\d/) из строки
+    var unitsParent = countInputParent.value.replace(/\d/g, '');
+    butPParent.onclick = function(){
+      //(parseInt) перевод значение в число. Прибавить к нему +1
+      //и удалить ранее стоящую цифру
+      countInputParent.value = parseInt(countInputParent.value)+1+unitsParent;
     };
-    butM.onclick = function(){
-      if(parseInt(countInput.value) > 1) {
-          countInput.value = parseInt(countInput.value)-1+units;
+    butMParent.onclick = function(){
+      if(parseInt(countInputParent.value) > 1) {
+          countInputParent.value = parseInt(countInputParent.value)-1+unitsParent;
+      }
+    };
+  </script>
+  <script>
+    var counterChild = document.querySelector('counter');
+    var countInputChild = document.getElementById('child');
+    var butMChild = document.getElementById('minusChild');
+    var butPChild = document.getElementById('plusChild');
+    var unitsChild = countInputChild.value.replace(/\d/g, '');
+    butPChild.onclick = function(){
+      countInputChild.value = parseInt(countInputChild.value)+1+unitsChild;
+    };
+    butMChild.onclick = function(){
+      if(parseInt(countInputChild.value) > 1) {
+          countInputChild.value = parseInt(countInputChild.value)-1+unitsChild;
       }
     };
   </script>
