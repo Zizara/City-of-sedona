@@ -479,3 +479,10 @@ section>p {
 	-moz-transition: background 0.5s;
 	-webkit-transition: background 0.5s;
 }
+
+/*Внутренняя страница!*/
+.inner-background {
+  height: 215px;
+  background: #273a41 url(../img/inner_background.png) no-repeat;
+  background-size: 100% auto;
+}
