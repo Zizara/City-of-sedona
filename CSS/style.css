@@ -486,3 +486,58 @@ section>p {
   background: #273a41 url(../img/inner_background.png) no-repeat;
   background-size: 100% auto;
 }
+/*чекбоксы*/
+.inner-choose {
+  display: inline-flex;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-left: 70px;
+}
+
+.inner-choose p {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.checkbox {
+  position: relative;
+  margin-bottom: 25px;
+  align-self:flex-start;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  padding-left: 35px;
+  cursor: pointer;
+}
+.checkbox span {
+  opacity: 0.85;
+}
+
+.checkbox:hover span {
+  opacity: 1;
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox input[type="checkbox"]+.checkbox-text {
+  position: absolute;
+  left: 0;
+  background: url("../img/sprites.png") no-repeat center;
+  background-position: -199px 0;
+	width: 22px;
+	height: 22px;
+}
+
+.checkbox input[type="checkbox"]:checked+.checkbox-text::after {
+  content: "";
+  position: absolute;
+  background: url("../img/sprites.png") no-repeat center;
+  background-position: -105px 0;
+  width: 26px;
+  height: 22px;
+  opacity: 1;
+}
