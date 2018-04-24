@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https:/resources/demos/style.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slider.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic">
   <link rel="stylesheet" href="css/web-fonts-with-css/css/fontawesome-all.min.css">
@@ -26,59 +27,48 @@
   <div class="inner-background">
     <div class="inner-choose">
       <p>Инфраструктура:</p>
-      <label class="checkbox">
-        <input type="checkbox" name="pool" value="">
-        <span class="checkbox-text"></span>
-      бассейн</label>
-      <label class="checkbox">
-        <input type="checkbox" name="parling" value="">
-        <span class="checkbox-text"></span>
-      парковка</label>
-      <label class="checkbox">
-        <input type="checkbox" name="wi-fi" value="">
-        <span class="checkbox-text"></span>
-      wi-fi</label>
+        <label class="checkbox">
+          <input type="checkbox" name="pool" value="">
+          <span class="checkbox-text"></span>
+        бассейн</label>
+        <label class="checkbox">
+          <input type="checkbox" name="parling" value="">
+          <span class="checkbox-text"></span>
+        парковка</label>
+        <label class="checkbox">
+          <input type="checkbox" name="wi-fi" value="">
+          <span class="checkbox-text"></span>
+        wi-fi</label>
     </div>
     <div class="inner-choose">
       <p>тип жилья:</p>
-      <label class="checkbox">
-        <input type="checkbox" name="hotel" value="">
-        <span class="checkbox-text"></span>
-      гостиница</label>
-      <label class="checkbox">
-        <input type="checkbox" name="motel" value="">
-        <span class="checkbox-text"></span>
-      мотель</label>
-      <label class="checkbox">
-        <input type="checkbox" name="appartaments" value="">
-        <span class="checkbox-text"></span>
-      аппартаменты</label>
+        <label class="checkbox">
+          <input type="checkbox" name="hotel" value="">
+          <span class="checkbox-text"></span>
+        гостиница</label>
+        <label class="checkbox">
+          <input type="checkbox" name="motel" value="">
+          <span class="checkbox-text"></span>
+        мотель</label>
+        <label class="checkbox">
+          <input type="checkbox" name="appartaments" value="">
+          <span class="checkbox-text"></span>
+        аппартаменты</label>
     </div>
-    <div class="innerrange">
+    <div class="range">
       <p>стоимость в сутки (Р):</p>
-      <input type="text" id="minCost" value="0"/>
-        <input type="text" id="maxCost" value="1000"/>
+        <div class="range-value">
+          <input type="text" id="minCost" value="0">
+          <input type="text" id="maxCost" value="1000">
+        </div>
         <div id="slider"></div>
+        <div class="range-btn">
+          <button class="inner-btn" type="button" name="inner-button">Показать</button>
+        </div>
 
     </div>
   </div>
 </main>
-<script type="text/javascript">
-jQuery("#slider").slider({
-	min: 0,
-	max: 1000,
-	values: [0,1000],
-	range: true,
-	stop: function(event, ui) {
-		jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
-		jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
-    },
-    slide: function(event, ui){
-		jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
-		jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
-    }
-});
-</script>
-
 </body>
+<script src="js/slider.js"></script>
 </html>

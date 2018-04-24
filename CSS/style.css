@@ -480,11 +480,20 @@ section>p {
 	-webkit-transition: background 0.5s;
 }
 
-/*Внутренняя страница!*/
+/*------------------Внутренняя страница------------------*/
 .inner-background {
+  align-items: center;
+  display: flex;
   height: 215px;
   background: #273a41 url(../img/inner_background.png) no-repeat;
   background-size: 100% auto;
+}
+
+.inner-background p {
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-bottom: 25px;
 }
 /*чекбоксы*/
 .inner-choose {
@@ -492,13 +501,6 @@ section>p {
   flex-direction: column;
   padding-top: 25px;
   padding-left: 70px;
-}
-
-.inner-choose p {
-  font-size: 16px;
-  line-height: 21px;
-  color: #ffffff;
-  margin-bottom: 25px;
 }
 
 .checkbox {
@@ -542,66 +544,71 @@ section>p {
   opacity: 1;
 }
 
-/*input range*/
+/*------------input range----------*/
+.range {
+  margin-left: auto;
+  margin-right: 50px;
+}
 
+.range-value input[type="text"] {
+  font-family: "PT Sans", sans-serif, Arial;
+  width: 160px;
+  text-align: center;
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
 
-/* Ширина слайдера */
-#slider {
-	width: 200px;
+.range-value {
+  position: relative;
+  border: 3px solid #fff;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
 }
-/* Контейнер слайдера */
-.ui-slider {
-	position: relative;
+
+.range-value::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  width: 2px;
+  height: 23px;
+  top: 8px;
+  left: 50%;
 }
-/* Ползунок */
-.ui-slider .ui-slider-handle {
-	position: absolute;
-	z-index: 2;
-	width: 13px;   /* Задаем нужную ширину */
-	height: 13px;  /* и высоту */
-	background: url(../img/slider.png) no-repeat; /* картинка изображающая ползунок. Или можно залить цветом, задать бордюр и скругления */
-	cursor: pointer
+
+.range-btn {
+  display: flex;
+  justify-content: center;
 }
-.ui-slider .ui-slider-range {
-	position: absolute;
-	z-index: 1;
-	font-size: .7em;
-	display: block;
-	border: 0;
-	overflow: hidden;
+
+.inner-btn {
+  margin-top: 20px;
+  overflow: hidden;
+  height: 35px;
+  padding: 0 30px;
+  outline: none;
+  border: 0;
+  font-family: "PT Sans", sans-serif, Arial;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  opacity: 0.6;
 }
-/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
-.ui-slider-horizontal {
-	 height: 3px; /* задаем высоту согласно дизайна */
-}
-/* позиционируем ползунки */
-.ui-slider-horizontal .ui-slider-handle {
-	top: -5px;
-	margin-left: -6px;
-}
-.ui-slider-horizontal .ui-slider-range {
-	top: 0;
-	height: 100%;
-}
-.ui-slider-horizontal .ui-slider-range-min {
-	left: 0;
-}
-.ui-slider-horizontal .ui-slider-range-max {
-	right: 0;
-}
-/* оформление полосы по которой ходит ползунок */
-.ui-widget-content {
-	border: 1px solid #D4D4D4;
-	background: #fff;
-}
-/* оформление активного участка (между двумя ползунками) */
-.ui-widget-header {
-	border: 1px solid #D4D4D4;
-	background: #f00;
-}
-/* скругление для полосы слайдера */
-.ui-corner-all {
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
+
+.inner-btn:hover {
+  opacity: 1;
 }
