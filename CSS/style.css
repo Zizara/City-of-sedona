@@ -33,6 +33,7 @@ body {
 }
 
 p,
+h4,
 figure {
   margin: 0;
   padding: 0;
@@ -611,4 +612,67 @@ section>p {
 
 .inner-btn:hover {
   opacity: 1;
+}
+
+/*------------Сортировка----------*/
+.result {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 70px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fefefe;
+}
+
+.result .direction {
+  margin-left: auto;
+  margin-right: 45px;
+}
+
+.sorting {
+  display: flex;
+  list-style-type: none;
+}
+
+.sorting>li {
+  font-size: 12px;
+  line-height: 18px;
+  margin-right: 40px;
+}
+
+.sorting>li>a {
+  text-decoration: none;
+  color: rgba(0,0,0,0.3);
+  border-bottom: 1px dotted #81b3d2;
+}
+.sorting .active {
+  color: #81b3d2;
+  border: none;
+}
+
+.sorting>li>a:hover {
+  color: #81b3d2;
+  border: none;
+}
+
+/* кнопка вверх и вниз */
+.direction {
+  display: flex;
+}
+
+.down i {
+  font-size: 25px;
+  color: #81b3d2;
+  margin-left: 10px;
+}
+
+.up i {
+  font-size: 25px;
+  color: #81b3d2;
+}
+
+.down i:hover,
+.up i:hover {
+  color: #000;
+  cursor: pointer;
 }
