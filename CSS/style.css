@@ -461,10 +461,9 @@ section>p {
   border-top: 1px solid #81b3d2;
 }
 
-.footerForm .btn {
+.btn {
   overflow: hidden;
-  height: 39px;
-  padding: 0 25px;
+  padding: 10px 25px;
   outline: none;
   border: 0;
   font-family: "PT Sans", sans-serif, Arial;
@@ -472,9 +471,10 @@ section>p {
   color: #fff;
   cursor: pointer;
   background: #81b3d2;
+  transition: 0.3s;
 }
 
-.footerForm .btn:hover {
+.btn:hover {
   background: rgb(27, 204, 194);
 	-ms-transition: background 0.5s;
 	-moz-transition: background 0.5s;
@@ -516,6 +516,7 @@ section>p {
 }
 .checkbox span {
   opacity: 0.85;
+  transition: 0.5s;
 }
 
 .checkbox:hover span {
@@ -675,4 +676,126 @@ section>p {
 .up i:hover {
   color: #000;
   cursor: pointer;
+}
+
+/*------------СПИСОК ОТЕЛЕЙ----------*/
+.hotel {
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px 0;
+  padding-left: 70px;
+  background: rgb(242, 255, 245);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.hotel:nth-child(n+3) {
+  border-top: none;
+  border-bottom: 1px solid #000;
+}
+.hotel>img {
+  margin-right: 30px;
+}
+
+.name-hotel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 270px;
+}
+
+.name-hotel h4 {
+  font-size: 21px;
+}
+
+.name-hotel span {
+  font-size: 14px;
+  line-height: 21px;
+  padding-bottom: 5px;
+}
+
+.name-hotel span:last-of-type {
+  margin-right: 70px;
+}
+
+/*кнопка*/
+.hotel-btn {
+  width: 110px;
+  margin-right: 10px;
+  padding: 2px 4px;
+}
+
+.brn-brown {
+  width: 150px;
+  padding: 2px 4px;
+  background: #766357;
+}
+
+.brn-brown:hover {
+  background: rgb(77, 81, 88);
+}
+
+/*рейтинг-звезды*/
+.rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 45px;
+  margin-left: auto;
+}
+
+.rating p {
+  text-align: center;
+  font-size: 14px;
+  padding: 5px;
+  background: rgb(226, 226, 226);
+}
+
+/*------------FOOTER----------*/
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  background: #fff;
+  margin-top: -30px;
+  padding: 55px;
+}
+
+.main-footer p {
+  color: #000;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.footer-social {
+  text-align: center;
+  width: 150px;
+}
+
+.socia-btn {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  font-size: 0;
+  width: 43px;
+  height: 43px;
+  margin: 0 2px;
+  background: #81b3d2 url(../img/sprites.png) no-repeat
+   center;
+  transition: background-color 0.2s
+}
+
+.btn-tw {
+  background-position: 0 0;
+
+}
+
+.btn-fb {
+  background-position: -244px 0;
+
+}
+
+.btn-yt {
+  background-position: -269px 0;
 }
