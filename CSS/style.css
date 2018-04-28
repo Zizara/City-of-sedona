@@ -124,15 +124,15 @@ nav a.menu-logo {
 }
 
 .font-wisdom {
-    font-family: "wisdom_scriptregular", sans-serif, Arial;
-    color: #766357;
-    font-size: 29px;
-    width: 200px;
-    margin: 0 auto;
-    padding: 10px 15px;
-    text-transform: none;
-    line-height: 44px;
-    position: relative;
+  font-family: "wisdom_scriptregular", sans-serif, Arial;
+  color: #766357;
+  font-size: 29px;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  text-transform: none;
+  line-height: 44px;
+  position: relative;
 }
 
 .font-wisdom::after {
@@ -641,6 +641,11 @@ section>p {
   margin-right: 40px;
 }
 
+.sorting>li:first-child {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .sorting>li>a {
   text-decoration: none;
   color: rgba(0,0,0,0.3);
@@ -759,7 +764,7 @@ section>p {
   color: #000;
   background: #fff;
   margin-top: -30px;
-  padding: 55px;
+  padding: 55px 70px;
 }
 
 .main-footer p {
@@ -768,34 +773,38 @@ section>p {
   font-weight: 700;
   line-height: 26px;
 }
+
 .footer-social {
-  text-align: center;
-  width: 150px;
+  width: 250px;
 }
 
 .socia-btn {
   display: inline-block;
   vertical-align: top;
-  text-decoration: none;
-  font-size: 0;
+  text-align: center;
+  padding: 15px 8px;
   width: 43px;
-  height: 43px;
+  /* height: 43px; */
   margin: 0 2px;
-  background: #81b3d2 url(../img/sprites.png) no-repeat
-   center;
+  background: #81b3d2;
+  color: #fff;
   transition: background-color 0.2s
 }
 
-.btn-tw {
-  background-position: 0 0;
-
+.socia-btn:hover {
+  background: rgb(27, 204, 194);
 }
 
-.btn-fb {
-  background-position: -244px 0;
-
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btn-yt {
-  background-position: -269px 0;
+.copyright span {
+  margin-right: 15px;
+}
+
+.copyright img:hover{
+  opacity: 0.7;
 }
